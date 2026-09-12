@@ -1,0 +1,48 @@
+{
+  "name": "pi-mascot",
+  "version": "0.1.0",
+  "description": "Terminal-safe companion mascot extension for Pi Coding Agent featuring Perrogato",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "src",
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "pi-package",
+    "pi-coding-agent",
+    "extension",
+    "mascot",
+    "perrogato",
+    "terminal",
+    "status"
+  ],
+  "author": "Luis Leon <luisleon705@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lleontor705/pi-mascot.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "scripts": {
+    "build": "tsc",
+    "pretest": "npm run build",
+    "test": "node --test test/**/*.test.js",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^0.85.1",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
